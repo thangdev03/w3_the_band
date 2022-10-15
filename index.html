@@ -7,6 +7,7 @@
     <title>The Band | W3School Template</title>
     <link rel="icon" href="https://www.pngitem.com/pimgs/m/102-1020384_garageband-icon-garage-band-hd-png-download.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
 <body>
     <div id="main">
@@ -33,7 +34,10 @@
 
             <!-- Begin: Search -->
             <div class="search-btn">
-                <i class="search-icon ti-search"></i>
+                <i class="search-icon ti-search white-color"></i>
+            </div>
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!-- End: Search -->
         </div>
@@ -237,8 +241,34 @@
                 event.stopPropagation()
             })
         </script>
-
         <!-- End: Buy Tickets Modal -->
     </div>
+    
+    <!-- Mobile Menu JS -->
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+        
+        // Open menu
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            //Gán kết quả phép so sánh đằng sau vào biến isClosed
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // Auto close menu when click on menu items
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function() {
+                header.style.height = null;
+            }
+        }     
+    </script>
 </body>
 </html>
