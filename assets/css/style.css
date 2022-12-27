@@ -35,6 +35,10 @@ html {
     margin-top: 16px;
 }
 
+.mb-16 {
+    margin-bottom: 16px;
+}
+
 .row {
     margin-left: -8px;
     margin-right: -8px;
@@ -233,7 +237,7 @@ html {
 }
 
 #content .member-list {
-    margin-top: 48px;
+    margin-top: 32px;
     padding: 32px 0;
 }
 
@@ -285,7 +289,7 @@ html {
 
 /* Places */
 .place-list {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .place-img {
