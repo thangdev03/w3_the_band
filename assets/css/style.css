@@ -28,15 +28,15 @@ html {
 }
 
 .mt-8 {
-    margin-top: 8px;
+    margin-top: 8px !important;
 }
 
 .mt-16 {
-    margin-top: 16px;
+    margin-top: 16px !important;
 }
 
 .mb-16 {
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
 }
 
 .row {
@@ -56,15 +56,15 @@ html {
 }
 
 .col-half {
-    width: 50%;
+    width: 50% !important;
 }
 
 .col-third {
-    width: 33.3333%;
+    width: 33.3333% !important;
 }
 
 .col-full {
-    width: 100%;
+    width: 100% !important;
 }
 
 /* Main */
@@ -351,6 +351,11 @@ html {
 .contact-info i[class*= "ti-"] {
     width: 30px;
     display: inline-block;
+}
+
+.contact-info a {
+    color: #2196F3;
+    padding: 8px 0;
 }
 
 .contact-form {
